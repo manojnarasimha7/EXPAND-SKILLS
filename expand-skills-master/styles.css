@@ -1,0 +1,114 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: max-content;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.intro h1 {
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 5rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-bottom: 1rem;
+  color: rgb(36, 36, 36);
+}
+
+hr {
+  border: 1px solid rgb(117, 117, 117);
+  border-bottom: 0;
+  margin-left: 2rem;
+  margin-right: 5rem;
+}
+
+.courses-container-block {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 3rem;
+}
+
+.courses-container-block div {
+  border: 1px solid rgb(117, 117, 117);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 1rem;
+}
+
+.courses-container-block img {
+  height: 15rem;
+  width: 15rem;
+}
+
+.courses-container-block h1 {
+  font-size: 3rem;
+}
+
+.courses-container-layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.courses-container-layout a::before {
+  content: "";
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  top: 0;
+  right: 40px;
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  transition: width 0.3s, height 0.3s;
+  border-radius: 50%;
+}
+
+.courses-container-layout a {
+  position: relative;
+  overflow: hidden;
+}
+
+.courses-container-layout a:hover::before {
+  width: 60rem;
+  height: 60rem;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.courses-container-layout a:hover h1 {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+@media screen and (max-width: 1230px) {
+  .courses-container-block {
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .intro h1 {
+    text-align: center;
+  }
+
+  hr {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
